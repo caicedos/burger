@@ -1,0 +1,12 @@
+### Schema
+CREATE DATABASE burgers_db;
+
+USE burgers_db;
+
+CREATE TABLE burgers(
+id INTEGER(5) AUTO_INCREMENT NOT NULL,
+name VARCHAR(150) NOT NULL,
+devoured  BOOLEAN,
+PRIMARY KEY(ID)
+);
+
