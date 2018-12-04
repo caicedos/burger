@@ -1,12 +1,13 @@
-var mysql = require("mysql");
+require("dotenv").config();
 
-var connection = mysql.createConnection({
-  host: "us-cdbr-iron-east-01.cleardb.net",
-  port: 3306,
-  user: "ba72d02a3d2800",
-  password: "da8054e5",
-  database: "burgers_db"
-});
+var mysql = require("mysql");
+var keys = require("./keys");
+
+var db = keys.db
+
+var connection = mysql.createConnection(
+  db
+);
 
 connection.connect(function (err) {
   if (err) {
@@ -18,4 +19,3 @@ connection.connect(function (err) {
 
 module.exports = connection;
 
-// mysql://ba72d02a3d2800:da8054e5@us-cdbr-iron-east-01.cleardb.net/heroku_4a804d9888ecc87?reconnect=true
