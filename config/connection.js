@@ -2,10 +2,10 @@ var mysql = require("mysql");
 
 var connection = mysql.createConnection({
   host: "us-cdbr-iron-east-01.cleardb.net",
-  // port: 3306,
-  user: "b0a9a0a1907a4d",
-  password: "d5838235",
-  database: "heroku_197371bae705b0d"
+  port: 3306,
+  user: "ba72d02a3d2800",
+  password: "da8054e5",
+  database: "burgers_db"
 });
 
 connection.connect(function (err) {
@@ -18,4 +18,4 @@ connection.connect(function (err) {
 
 module.exports = connection;
 
-// mysql://b0a9a0a1907a4d:d5838235@us-cdbr-iron-east-01.cleardb.net/heroku_197371bae705b0d?reconnect=true
+// mysql://ba72d02a3d2800:da8054e5@us-cdbr-iron-east-01.cleardb.net/heroku_4a804d9888ecc87?reconnect=true
