@@ -1,0 +1,15 @@
+<li class="row">
+	<div class="col-md">
+		{{name}}
+
+	</div>
+	<div class="col-md">
+		{{#if devoured}}
+		<button class="change-state btn btn-primary text-right" data-id="{{id}}" data-newburger="{{devoured}}">
+			<i class="fas fa-utensils"></i>
+		</button>
+		{{/if}}
+		<button class="delete-burger btn btn-danger text-right" data-id="{{this.id}}"><i class="fas fa-times"></i></button>
+	</div>
+
+</li>

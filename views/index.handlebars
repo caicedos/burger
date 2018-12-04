@@ -1,0 +1,44 @@
+<div class="header bg-info font-weight-bold">
+  <h1 class="text-center">Eat-Da-Burger! <i class="fas fa-utensils"></i></h1>
+</div>
+
+<div class="container font-weight-bold text-light">
+  <div class="text-right">
+    <h3>Add a Burger</h3>
+    <form class="create-form">
+
+      <div class="form-group">
+        <label for="bg">Burger Name:</label>
+        <input type="text" id="bg" name="devoured">
+      </div>
+
+      <button class="btn btn-primary" type="submit">Add</button>
+    </form>
+  </div>
+
+  <div class="row">
+    <div class="col-md">
+      <h4 class="text-center">Burgers!</h4>
+
+      <ul>
+        {{#each burgers}}
+        {{#unless devoured}}
+        {{> burgers/burger-block devoured=true}}
+        {{/unless}}
+        {{/each}}
+      </ul>
+    </div>
+
+    <div class="col-md">
+      <h4 class="text-center">Devoured Burgers!</h4>
+
+      <ul>
+        {{#each burgers}}
+        {{#if devoured}}
+        {{> burgers/burger-block devoured=false}}
+        {{/if}}
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+</div>
