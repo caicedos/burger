@@ -1,8 +1,11 @@
 var express = require("express");
+var favicon = require('serve-favicon');
+var path = require('path');
 
 var PORT = process.env.PORT || 8080;
 
 var app = express();
+
 
 app.use(express.static("public"));
 
@@ -11,6 +14,7 @@ app.use(express.urlencoded({
 }));
 app.use(express.json());
 
+app.use(favicon(path.join(__dirname, 'public', 'assets', 'favicon.ico')));
 var exphbs = require("express-handlebars");
 
 app.engine("handlebars", exphbs({
