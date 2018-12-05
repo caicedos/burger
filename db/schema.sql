@@ -1,3 +1,7 @@
+CREATE DATABASE burger_db;
+USE burger_db;
+
+
 CREATE TABLE burgers(
 id INTEGER(5) AUTO_INCREMENT NOT NULL,
 name VARCHAR(150) NOT NULL,
